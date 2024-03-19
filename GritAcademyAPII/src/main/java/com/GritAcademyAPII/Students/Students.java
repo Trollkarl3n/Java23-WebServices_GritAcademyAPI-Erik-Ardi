@@ -1,5 +1,6 @@
 package com.GritAcademyAPII.Students;
 
+import com.GritAcademyAPII.Courses.Courses;
 import com.GritAcademyAPII.StudentCourses.StudentCourses;
 import jakarta.persistence.*;
 import lombok.*;
@@ -42,6 +43,8 @@ public class Students {
     @Column(name = "hobby")
     private String hobby;
 
-    @OneToMany(mappedBy = "student", fetch = FetchType.LAZY)
-    private Set<StudentCourses> courses = new HashSet<>();
+    @ManyToMany(mappedBy = "student", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(name = "StudentCourses",
+            joinColumns = @JoinColumn(name = "student_id"), inverseJoinColumns = @JoinColumn(name = "courses_id"))
+    Set<Courses> courses = new HashSet<>();
 }

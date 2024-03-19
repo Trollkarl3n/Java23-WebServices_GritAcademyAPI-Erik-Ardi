@@ -1,6 +1,7 @@
 package com.GritAcademyAPII.Courses;
 
 import com.GritAcademyAPII.StudentCourses.StudentCourses;
+import com.GritAcademyAPII.Students.Students;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -30,9 +31,9 @@ public class Courses {
     @Column(name = "description")
     private  String description;
 
-    @Column(name = "yhp")
-    private Integer yhp;
+    @Column(name = "YHP")
+    private Integer YHP;
 
-    @OneToMany(mappedBy = "course", fetch = FetchType.LAZY)
-    private Set<StudentCourses> students = new HashSet<>();
+    @ManyToMany(mappedBy = "courses")
+    Set<Students> students = new HashSet<>();
 }

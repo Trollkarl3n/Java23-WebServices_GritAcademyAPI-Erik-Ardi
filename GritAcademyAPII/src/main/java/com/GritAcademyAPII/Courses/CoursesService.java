@@ -3,11 +3,14 @@ package com.GritAcademyAPII.Courses;
 import com.GritAcademyAPII.Courses.CoursesDTO;
 import com.GritAcademyAPII.Courses.Courses;
 import com.GritAcademyAPII.Courses.CoursesRep;
+import com.GritAcademyAPII.Students.Students;
+import com.GritAcademyAPII.Students.StudentsDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class CoursesService {
@@ -20,12 +23,7 @@ public class CoursesService {
     public Optional<Courses> getStudentById(int id){
         return coursesRepository.findById((long) id);
     }
-    public Courses saveStudent(Courses courses){
-        return coursesRepository.save(courses);
-    }
-    public void removeStudentById(int id){
-        coursesRepository.deleteById((long) id);
-    }
+
     public List<CoursesDTO> getCoursesByStudentsId(int studentsID){
 
         return coursesRepository.findByStudentsId(studentsID).stream().map(this::mapToDTO).collect(Collectors.toList());
@@ -43,7 +41,7 @@ public class CoursesService {
         CoursesDTO dto = new CoursesDTO();
         dto.setId(courses.getId());
         dto.setName(courses.getName());
-        dto.setYHP(courses.getYHP());
+        dto.setYHP(courses.getyhp());
         dto.setDescription(courses.getDescription());
         dto.setStudents(courses.getStudents().stream().map(this::mapToDTO).collect(Collectors.toList()));
         return dto;
