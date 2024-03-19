@@ -17,6 +17,10 @@ public class CoursesService {
     @Autowired
     CoursesRep coursesRepository;
 
+    public List <Courses> getAllCourses() {
+        return coursesRepository.findAll();
+    }
+
     public Iterable<Courses> getAllStudents(){
         return coursesRepository.findAll();
     }
@@ -24,10 +28,10 @@ public class CoursesService {
         return coursesRepository.findById((long) id);
     }
 
-    public List<CoursesDTO> getCoursesByStudentsId(int studentsID){
+    //public List<CoursesDTO> getCoursesByStudentsId(int studentsID){
 
-        return coursesRepository.findByStudentsId(studentsID).stream().map(this::mapToDTO).collect(Collectors.toList());
-    }
+        //return coursesRepository.findByStudentsId(studentsID).stream().map(this::mapToDTO).collect(Collectors.toList());
+    //}
 
     /**
      * This method is needed to avoid circular querries
@@ -41,9 +45,9 @@ public class CoursesService {
         CoursesDTO dto = new CoursesDTO();
         dto.setId(courses.getId());
         dto.setName(courses.getName());
-        dto.setYHP(courses.getyhp());
+        dto.setYhp(courses.getYhp());
         dto.setDescription(courses.getDescription());
-        dto.setStudents(courses.getStudents().stream().map(this::mapToDTO).collect(Collectors.toList()));
+        //dto.setStudents(courses.getStudents().stream().map(this::mapToDTO).collect(Collectors.toList()));
         return dto;
     }
     /**
@@ -61,9 +65,8 @@ public class CoursesService {
         dto.setHobby(students.getHobby());
         dto.setPhone(students.getPhone());
         dto.setTown(students.getTown());
-        dto.setFName(students.getFName());
-        dto.setLName(students.getLName());
-        dto.setPassword(students.getPassword());
+        dto.setFName(students.getFname());
+        dto.setLName(students.getLname());
         dto.setUsername(students.getUsername());
         return dto;
     }

@@ -10,7 +10,7 @@ public class CoursesDTO {
 
     private Long id;
     private String name;
-    private String yhp;
+    private int yhp;
     private String description;
     private List<StudentsDTO> students;
 }

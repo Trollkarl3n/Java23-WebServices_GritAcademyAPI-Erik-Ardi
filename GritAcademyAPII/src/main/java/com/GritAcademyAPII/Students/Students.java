@@ -43,8 +43,10 @@ public class Students {
     @Column(name = "hobby")
     private String hobby;
 
-    @ManyToMany(mappedBy = "student", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+   /* @ManyToMany(mappedBy = "student", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(name = "StudentCourses",
             joinColumns = @JoinColumn(name = "student_id"), inverseJoinColumns = @JoinColumn(name = "courses_id"))
     Set<Courses> courses = new HashSet<>();
+
+    */
 }

@@ -31,9 +31,9 @@ public class Courses {
     @Column(name = "description")
     private  String description;
 
-    @Column(name = "YHP")
-    private Integer YHP;
+    @Column(name = "yhp")
+    private Integer yhp;
 
-    @ManyToMany(mappedBy = "courses")
-    Set<Students> students = new HashSet<>();
+    //@ManyToMany(mappedBy = "courses")
+    //Set<Students> students = new HashSet<>();
 }

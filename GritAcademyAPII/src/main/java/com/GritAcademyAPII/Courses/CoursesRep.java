@@ -11,5 +11,7 @@ import java.util.Optional;
 @Repository
 public interface CoursesRep extends JpaRepository<Courses, Long> {
 
-    List<Courses> findByStudentsId(int studenId);
+    //List<Courses> findByStudentsId(int studenId);
+
+
 }
