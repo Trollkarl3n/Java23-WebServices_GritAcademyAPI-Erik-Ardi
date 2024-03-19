@@ -1,5 +1,6 @@
-package com.GritAcademyAPII.Entitys;
+package com.GritAcademyAPII.Courses;
 
+import com.GritAcademyAPII.StudentCourses.StudentCourses;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

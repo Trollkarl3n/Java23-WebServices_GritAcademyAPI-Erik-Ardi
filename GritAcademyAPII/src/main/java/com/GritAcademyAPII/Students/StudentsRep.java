@@ -1,4 +1,4 @@
-package com.GritAcademyAPII.Repos;
+package com.GritAcademyAPII.Students;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
@@ -7,5 +7,9 @@ import java.util.List;
 
 @Repository
 public interface StudentsRep extends CrudRepository<Students, Long> {
-    List<Students> findAllbyName(String fname);
+    List<Students> findAllByFname(String fName);
+
+    List<Students> findAllByLname(String lName);
+
+    List<Students> findAllByTown(String town);
 }

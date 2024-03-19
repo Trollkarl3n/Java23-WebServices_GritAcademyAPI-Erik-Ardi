@@ -1,5 +1,7 @@
-package com.GritAcademyAPII.Entitys;
+package com.GritAcademyAPII.StudentCourses;
 
+import com.GritAcademyAPII.Courses.Courses;
+import com.GritAcademyAPII.Students.Students;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
