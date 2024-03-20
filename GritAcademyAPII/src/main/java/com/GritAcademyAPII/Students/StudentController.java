@@ -32,7 +32,7 @@ public class StudentController {
         if (student != null) {
             return new ResponseEntity<>(student, HttpStatus.OK);
         }
-        return new ResponseEntity<>("Student not found", HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>("404, Student not found", HttpStatus.NOT_FOUND);
     }
 
     @GetMapping("/fname/{fName}")
@@ -41,7 +41,7 @@ public class StudentController {
         if (!students.isEmpty()) {
             return new ResponseEntity<>(students, HttpStatus.OK);
         }
-        return new ResponseEntity<>("Students with the given first name not found", HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>("404, Students with the given first name not found", HttpStatus.NOT_FOUND);
     }
 
     @GetMapping("/lname/{lName}")
@@ -50,7 +50,7 @@ public class StudentController {
         if (!students.isEmpty()) {
             return new ResponseEntity<>(students, HttpStatus.OK);
         }
-        return new ResponseEntity<>("Students with the given last name not found", HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>("404, Students with the given last name not found", HttpStatus.NOT_FOUND);
     }
 
     @GetMapping("/town/{town}")
@@ -59,6 +59,6 @@ public class StudentController {
         if (!students.isEmpty()) {
             return new ResponseEntity<>(students, HttpStatus.OK);
         }
-        return new ResponseEntity<>("Students from the given town not found", HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>("404, Students from the given town not found", HttpStatus.NOT_FOUND);
     }
 }

@@ -31,7 +31,7 @@ public class CoursesController {
         if (course != null) {
             return new ResponseEntity<>(course, HttpStatus.OK);
         }
-        return new ResponseEntity<>("Course not found", HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>("404, Course not found", HttpStatus.NOT_FOUND);
     }
 
     @GetMapping("/name/{name}")
@@ -40,7 +40,7 @@ public class CoursesController {
         if (!courses.isEmpty()) {
             return new ResponseEntity<>(courses, HttpStatus.OK);
         }
-        return new ResponseEntity<>("Courses with the given name not found", HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>("404, Courses with the given name not found", HttpStatus.NOT_FOUND);
     }
 
     @GetMapping("/name/contains/{keyword}")
@@ -49,7 +49,7 @@ public class CoursesController {
         if (!courses.isEmpty()) {
             return new ResponseEntity<>(courses, HttpStatus.OK);
         }
-        return new ResponseEntity<>("No courses found with the given keyword in their name", HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>("404, No courses found with the given keyword in their name", HttpStatus.NOT_FOUND);
     }
 
     @GetMapping("/description/contains/{keyword}")
@@ -58,6 +58,6 @@ public class CoursesController {
         if (!courses.isEmpty()) {
             return new ResponseEntity<>(courses, HttpStatus.OK);
         }
-        return new ResponseEntity<>("No courses found with the given keyword in their description", HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>("404, No courses found with the given keyword in their description", HttpStatus.NOT_FOUND);
     }
 }
