@@ -1,12 +1,7 @@
 package com.GritAcademyAPII.Students;
 
-import com.GritAcademyAPII.Courses.Courses;
-import com.GritAcademyAPII.StudentCourses.StudentCourses;
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity(name = "students")
 @Table(name = "students")

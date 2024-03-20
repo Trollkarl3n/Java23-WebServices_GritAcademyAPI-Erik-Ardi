@@ -1,16 +1,11 @@
 package com.GritAcademyAPII.Courses;
 
-import com.GritAcademyAPII.StudentCourses.StudentCourses;
-import com.GritAcademyAPII.Students.Students;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity(name = "courses")
 @Table(name = "courses")
