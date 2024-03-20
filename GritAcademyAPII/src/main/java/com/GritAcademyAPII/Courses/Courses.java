@@ -1,6 +1,7 @@
 package com.GritAcademyAPII.Courses;
 
 import com.GritAcademyAPII.Students.Students;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -33,6 +34,7 @@ public class Courses {
     @Column(name = "yhp")
     private Integer yhp;
 
+    @JsonIgnore
     @ManyToMany(mappedBy = "courses")
     Set<Students> students = new HashSet<>();
 }

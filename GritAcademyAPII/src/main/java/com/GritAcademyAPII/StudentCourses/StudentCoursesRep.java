@@ -7,5 +7,5 @@ import java.util.List;
 
 @Repository
 public interface StudentCoursesRep extends JpaRepository<StudentCourses, Long> {
-    List<StudentCourses> findAll();
+    //List<StudentCourses> findAll();
 }

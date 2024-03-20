@@ -12,15 +12,17 @@ import java.util.List;
 public class CoursesController {
 
     private final CoursesRep courseRepository;
+    private final CoursesService coursesService;
 
     @Autowired
-    public CoursesController(CoursesRep courseRepository) {
+    public CoursesController(CoursesRep courseRepository, CoursesService coursesService) {
         this.courseRepository = courseRepository;
+        this.coursesService = coursesService;
     }
 
     @GetMapping
     public ResponseEntity<List<Courses>> getAllCourses() {
-        List<Courses> courses = courseRepository.findAll();
+        List<Courses> courses = coursesService.getAllCourses();
         return new ResponseEntity<>(courses, HttpStatus.OK);
     }
 
