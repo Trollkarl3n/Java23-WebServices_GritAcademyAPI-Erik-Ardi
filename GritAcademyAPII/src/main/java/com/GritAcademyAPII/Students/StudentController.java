@@ -24,7 +24,7 @@ public class StudentController {
         return new ResponseEntity<>(students, HttpStatus.OK);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{id}")    // Hej
     public ResponseEntity<?> getStudentById(@PathVariable Long id) {
         Students student = studentRepository.findById(id).orElse(null);
         if (student != null) {
