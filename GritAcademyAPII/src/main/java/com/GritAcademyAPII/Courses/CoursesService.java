@@ -25,12 +25,4 @@ public class CoursesService {
         return dto;
     }
 
-    private StudentsDTO mapToDTO(Students students){
-        StudentsDTO dto = new StudentsDTO();
-        dto.setId(students.getId());
-        dto.setTown(students.getTown());
-        dto.setFName(students.getFName());
-        dto.setLName(students.getLName());
-        return dto;
-    }
 }
