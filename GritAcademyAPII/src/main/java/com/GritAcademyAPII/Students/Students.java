@@ -30,12 +30,4 @@ public class Students {
     @Column(name = "town")
     private String town;
 
-
-    /*@ManyToMany(mappedBy = "Students", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinTable(name = "StudentsCourses",
-            joinColumns = @JoinColumn(name = "student_id"), inverseJoinColumns = @JoinColumn(name = "courses_id"))
-    Set<Courses> courses = new HashSet<>();
-
-     */
-
 }

@@ -18,13 +18,11 @@ public class StudentCourses {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    //@JoinColumn(name = "student_id")
     Students students;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    //@JoinColumn(name = "course_id")
     Courses courses;
 }
