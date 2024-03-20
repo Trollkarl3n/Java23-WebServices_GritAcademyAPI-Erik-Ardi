@@ -33,5 +33,6 @@ public class Courses {
     @Column(name = "yhp")
     private Integer yhp;
 
+    @ManyToMany(mappedBy = "courses")
     Set<Students> students = new HashSet<>();
 }
