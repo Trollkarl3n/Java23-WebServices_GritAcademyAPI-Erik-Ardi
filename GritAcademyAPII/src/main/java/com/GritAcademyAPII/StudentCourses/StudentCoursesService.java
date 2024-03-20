@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 
 @Service
 public class StudentCoursesService {
+     /*
 
     @Autowired
     StudentCoursesRep studentCoursesRepository;
@@ -26,4 +27,6 @@ public class StudentCoursesService {
         dto.getCoursesId(mapToDTO(studentCourses.getCoursesId()));
         return dto;
     }
+
+      */
 }
