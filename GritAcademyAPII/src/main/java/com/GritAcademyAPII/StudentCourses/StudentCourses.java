@@ -21,8 +21,10 @@ public class StudentCourses {
     Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    Students students;
+    @JoinColumn(name = "students_id", referencedColumnName = "id")
+    Students studentsId;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    Courses courses;
+    @JoinColumn(name = "courses_id", referencedColumnName = "id")
+    Courses coursesId;
 }
