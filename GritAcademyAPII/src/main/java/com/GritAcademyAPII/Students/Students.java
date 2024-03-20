@@ -21,32 +21,21 @@ public class Students {
     private Long id;
 
 
-    @Column(name = "username")
-    private String username;
+    @Column(name = "fName")
+    private String fName;
 
-    @Column(name = "fname")
-    private String fname;
-
-    @Column(name = "lname")
-    private String lname;
-
-
-    @Column(name = "email")
-    private String email;
-
-    @Column(name = "phone")
-    private String phone;
+    @Column(name = "lName")
+    private String lName;
 
     @Column(name = "town")
     private String town;
 
-    @Column(name = "hobby")
-    private String hobby;
 
-   /* @ManyToMany(mappedBy = "student", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinTable(name = "StudentCourses",
+    /*@ManyToMany(mappedBy = "Students", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(name = "StudentsCourses",
             joinColumns = @JoinColumn(name = "student_id"), inverseJoinColumns = @JoinColumn(name = "courses_id"))
     Set<Courses> courses = new HashSet<>();
 
-    */
+     */
+
 }

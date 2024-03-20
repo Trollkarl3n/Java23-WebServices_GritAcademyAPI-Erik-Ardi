@@ -9,14 +9,4 @@ import org.springframework.stereotype.Service;
 @Service
 public class StudentCoursesService {
 
-   /* @Autowired
-    StudentCoursesRep StudentCoursesRep;
-
-    @Autowired
-    CoursesRep coursesRep;
-
-    @Autowired
-    StudentsRep studentsRep;
-
-    */
 }

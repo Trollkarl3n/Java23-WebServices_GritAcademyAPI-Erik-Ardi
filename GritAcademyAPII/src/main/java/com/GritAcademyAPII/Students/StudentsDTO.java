@@ -11,10 +11,5 @@ public class StudentsDTO {
     private String fName;
     private String lName;
     private String town;
-    private String hobby;
-    private String email;
-    private String phone;
-    private String username;
-    private String password;
     private List<CoursesDTO> courses;
 }
