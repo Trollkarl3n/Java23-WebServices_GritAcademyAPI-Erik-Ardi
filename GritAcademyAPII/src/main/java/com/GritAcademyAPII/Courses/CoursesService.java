@@ -20,7 +20,6 @@ public class CoursesService {
     public List <Courses> getAllCourses() {
         return coursesRepository.findAll();
     }
-
     public Iterable<Courses> getAllStudents(){
         return coursesRepository.findAll();
     }

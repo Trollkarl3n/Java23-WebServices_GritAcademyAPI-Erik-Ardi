@@ -10,8 +10,9 @@ import java.util.Optional;
 
 @Repository
 public interface CoursesRep extends JpaRepository<Courses, Long> {
+    List<Courses> findByName(String name);
+    
+    List<Courses> findByNameContaining(String keyword);
 
-    //List<Courses> findByStudentsId(int studenId);
-
-
+    List<Courses> findByDescriptionContaining(String keyword);
 }
