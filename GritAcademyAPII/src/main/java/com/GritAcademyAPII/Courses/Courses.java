@@ -33,5 +33,5 @@ public class Courses {
     @Column(name = "yhp")
     private Integer yhp;
 
-    Set<Students> students = new HashSet<>()
+    Set<Students> students = new HashSet<>();
 }
