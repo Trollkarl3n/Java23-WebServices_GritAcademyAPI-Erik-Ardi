@@ -9,6 +9,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.net.ssl.SSLSession;
+
 @Entity(name = "students_courses")
 @Table(name = "students_courses")
 @NoArgsConstructor
@@ -23,12 +25,11 @@ public class StudentCourses {
 
     @ManyToOne
     @JoinColumn(name = "students_id", referencedColumnName = "id")
-    Students studentsId;
+    private Students students;
 
 
     @ManyToOne
     @JoinColumn(name = "courses_id", referencedColumnName = "id")
-    Courses coursesId;
-
+    private Courses courses;
 
 }

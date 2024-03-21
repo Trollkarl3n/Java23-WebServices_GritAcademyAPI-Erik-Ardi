@@ -12,23 +12,40 @@ import java.util.stream.Collectors;
 
 @Service
 public class StudentCoursesService {
-     /*
 
     @Autowired
-    StudentCoursesRep studentCoursesRepository;
+    private StudentCoursesRep studentCoursesRepository;
+
     public List<StudentCoursesDTO> getAllStudentCourses() {
-        return studentCoursesRepository.findAll().stream().map(this::mapToDTO).collect(Collectors.toList());
+        return studentCoursesRepository.findAll()
+                .stream()
+                .map(this::mapToDTO)
+                .collect(Collectors.toList());
+    }
+
+    public List<StudentCoursesDTO> getStudentCoursesByStudentId(Long studentId) {
+        return studentCoursesRepository.findByStudentsId(studentId)
+                .stream()
+                .map(this::mapToDTO)
+                .collect(Collectors.toList());
+    }
+
+    public List<StudentCoursesDTO> getStudentCoursesByCourseId(Long courseId) {
+        return studentCoursesRepository.findByCoursesId(courseId)
+                .stream()
+                .map(this::mapToDTO)
+                .collect(Collectors.toList());
     }
 
     private StudentCoursesDTO mapToDTO(StudentCourses studentCourses) {
         StudentCoursesDTO dto = new StudentCoursesDTO();
         dto.setId(studentCourses.getId());
-        dto.setStudentsId(mapToDTO(studentCourses.getStudentsId()));
-        dto.setCoursesId(mapToDTO(studentCourses.getCoursesId()));
+        dto.setStudentsId(mapToDTO(studentCourses.getStudents())); // Corrected method call
+        dto.setCoursesId(mapToDTO(studentCourses.getCourses()));
         return dto;
     }
 
-    private StudentsDTO mapToDTO(Students students){
+    private StudentsDTO mapToDTO(Students students) {
         StudentsDTO dto = new StudentsDTO();
         dto.setId(students.getId());
         dto.setTown(students.getTown());
@@ -37,7 +54,7 @@ public class StudentCoursesService {
         return dto;
     }
 
-    private CoursesDTO mapToDTO(Courses courses){
+    private CoursesDTO mapToDTO(Courses courses) {
         CoursesDTO dto = new CoursesDTO();
         dto.setId(courses.getId());
         dto.setName(courses.getName());
@@ -45,6 +62,4 @@ public class StudentCoursesService {
         dto.setDescription(courses.getDescription());
         return dto;
     }
-
-      */
 }
